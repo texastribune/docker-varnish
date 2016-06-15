@@ -40,6 +40,7 @@ COPY start-varnishd.sh /usr/local/bin/start-varnishd
 
 ENV VARNISH_PORT 80
 ENV VARNISH_MEMORY 100m
+ENV VARNISH_DAEMON_OPTS ""
 
 EXPOSE 80
 CMD ["start-varnishd"]
