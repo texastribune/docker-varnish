@@ -46,8 +46,13 @@ You can override the port Varnish serves in your Dockerfile.
 FROM newsdev/varnish:4.1.0
 
 ENV VARNISH_PORT 8080
+ENV VARNISH_DAEMON_OPTS "additional varnish options here"
 EXPOSE 8080
 ```
+
+For valid VARNISH_DAEMON_OPTS, see the [varnish options documentation](https://www.varnish-cache.org/docs/4.0/reference/varnishd.html#options).
+
+
 
 You can override the size of the cache.
 
