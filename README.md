@@ -2,7 +2,7 @@
 
 ## Supported tags and respective `Dockerfile` links
 
--	[`4.1.0`, `4.1`, `4`, `latest` (*4.1.0/Dockerfile*)](https://github.com/newsdev/docker-varnish/blob/4/Dockerfile)
+-	[`5.1.1`, `5.1`, `5`, `latest` (*5.1.1/Dockerfile*)](https://github.com/texastribune/docker-varnish/blob/4/Dockerfile)
 
 ## What is Varnish?
 
@@ -17,7 +17,7 @@ This image is intended as a base image for other images to built on.
 ### Create a `Dockerfile` in your Varnish project
 
 ```dockerfile
-FROM newsdev/varnish:4.1.0
+FROM texastribune/varnish:5.1.1
 ```
 
 ### Create a `default.vcl` in your Varnish project
@@ -43,21 +43,21 @@ $ docker run -it --rm --name my-running-varnish my-varnish
 You can override the port Varnish serves in your Dockerfile.
 
 ```dockerfile
-FROM newsdev/varnish:4.1.0
+FROM texastribune/varnish:5.1.1
 
 ENV VARNISH_PORT 8080
 ENV VARNISH_DAEMON_OPTS "additional varnish options here"
 EXPOSE 8080
 ```
 
-For valid VARNISH_DAEMON_OPTS, see the [varnish options documentation](https://www.varnish-cache.org/docs/4.0/reference/varnishd.html#options).
+For valid VARNISH_DAEMON_OPTS, see the [varnish options documentation](https://www.varnish-cache.org/docs/5.0/reference/varnishd.html#options).
 
 
 
 You can override the size of the cache.
 
 ```dockerfile
-FROM newsdev/varnish:4.1.0
+FROM texastribune/varnish:5.1.1
 
 ENV VARNISH_MEMORY 1G
 ```
@@ -71,7 +71,7 @@ To install Varnish Modules, you will need the Varnish source to compile against.
 Install VMODs in your Varnish project's Dockerfile. For example, to install the Querystring module:
 
 ```dockerfile
-FROM newsdev/varnish:4.1.0
+FROM texastribune/varnish:5.1.1
 
 # Install Querystring Varnish module
 ENV QUERYSTRING_VERSION=0.3
@@ -100,7 +100,7 @@ Please see [the Docker installation documentation](https://docs.docker.com/insta
 
 ## Issues
 
-If you have any problems with or questions about this image, please contact us through a [GitHub issue](https://github.com/newsdev/docker-varnish/issues).
+If you have any problems with or questions about this image, please contact us through a [GitHub issue](https://github.com/texastribune/docker-varnish/issues).
 
 ## Contributing
 
