@@ -34,6 +34,7 @@ RUN \
   ./autogen.sh && \
   ./configure && \
   make install && \
+  ldconfig && \
   rm ../varnish-$VARNISH_VERSION.tar.gz
 
 COPY start-varnishd.sh /usr/local/bin/start-varnishd
